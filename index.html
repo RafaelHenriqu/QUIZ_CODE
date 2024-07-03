@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Programado</title>
+    <style>
+        *{border: 0px;margin: 0px;padding: 0px;}
+        body{background-color: #222222;}
+        #desafio{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          text-align: center;
+          color: #fff;  
+          font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        input{
+            width: 30vh;
+            height: 3vh;
+            border-radius: 5px;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        button{
+            height: 2.6vh;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 15px;
+            width: 15vh;
+            border-radius: 3px;
+            font-size: 20px;
+            background-color: #4ef64e;
+            color: #1e1f5f;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="desafio">
+        <h1 id="palavra">d</h1>
+        <input type="text" id="Respota">
+        <br>
+        <button onclick="Verificar()">Enviar</button>
+        <p style="font-family: monospace;">Adivinhe A Linguagem</p>
+    </div>
+</body>
+<script>
+         
+    let Level = 0
+    let pergunta = document.getElementById("palavra")
+    let Respotas = ["HTML","CSS","Lua","Java","JavaScript","Ruby","GG","Você Ganhou!","Por que Continua?","Quer alguma coisa?","Desculpe Porem agora acabo","STOP","AAAAAAAAAAAAAAAAAA","Tu es louco ou se faz?","Youtuber Aff","Tinha Que ser corno","CORNO","O Bora Jogar Um Minezin?","Me ADD ai Mano","My Discord Asrics","ou hiyfly"," Agora Acabou"," "," "," Talveis Não Tenha acabado"," ","  ","Ok Ok Você Ganhou"," "," "]
+    pergunta.innerHTML = Respotas[Level][0]
+
+    function Verificar(){
+ 
+        let Respota_Do_Usuario = document.getElementById("Respota").value  
+        if (Respota_Do_Usuario == Respotas[Level]){
+
+            Level=Level+1
+            pergunta.innerHTML = Respotas[Level][0]
+          
+        }else{
+            alert("ERROU")
+        }
+    }
+
+
+</script>
+</html>
